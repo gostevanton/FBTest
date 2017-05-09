@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				E222F3861EC1C4070086BCD4 /* AppDelegate.swift */,
-				E222F3881EC1C4070086BCD4 /* ViewController.swift */,
+				E222F3B41EC1C5650086BCD4 /* ui */,
 				E222F38A1EC1C4070086BCD4 /* Main.storyboard */,
 				E222F38D1EC1C4070086BCD4 /* Assets.xcassets */,
 				E222F38F1EC1C4070086BCD4 /* LaunchScreen.storyboard */,
@@ -123,6 +123,38 @@
 				E222F3A81EC1C4080086BCD4 /* Info.plist */,
 			);
 			path = FBTestUITests;
+			sourceTree = "<group>";
+		};
+		E222F3B41EC1C5650086BCD4 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				E222F3B71EC1C59C0086BCD4 /* View */,
+				E222F3B51EC1C56C0086BCD4 /* ViewController */,
+				E222F3B61EC1C5830086BCD4 /* Presenter */,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		E222F3B51EC1C56C0086BCD4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E222F3881EC1C4070086BCD4 /* ViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		E222F3B61EC1C5830086BCD4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		E222F3B71EC1C59C0086BCD4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
