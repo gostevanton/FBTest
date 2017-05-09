@@ -22,13 +22,16 @@ class Facebook {
     
     var svc : SFSafariViewController?
     
+    var callback : ((String?, Error?) -> Void)?
+    
     /**
      Get facebook access token by opening a login window.
      
      - parameter callback:      Returns AccessToken as String or an Error.
      */
     public func getAuthToken(callback: @escaping (String?, Error?) -> Void) {
-        // TODO(кандидат): определить метод. Функция, которая делает логин:
+        self.callback = callback
+
         login()
     }
     
@@ -39,6 +42,40 @@ class Facebook {
     private func login() {
         svc = SFSafariViewController(url: url!)
         viewController?.present(svc!, animated: true, completion: nil)
+    }
+    
+    /**
+     Parsing token from url and calling results callback with token or error
+     
+     - parameter url:      Url for parsing.
+     */
+    func parsingURL(_ url: URL) {
+        
+        var query = url.description
+        let array = query.components(separatedBy: "#")
+        
+        if array.count > 1 {
+            query = array.last!
+        }
+        
+        let pairs = query.components(separatedBy: "&")
+        
+        var token : String? = nil
+        
+        for pair in pairs {
+            if pair.contains("access_token=") {
+                token = pair.replacingOccurrences(of: "access_token=", with: "")
+            }
+        }
+        
+        self.svc?.dismiss(animated: true, completion: nil)
+        
+        if let token = token {
+            self.callback?(token, nil)
+        } else {
+            let error = NSError(domain:"The token was not received", code:400, userInfo:nil)
+            self.callback?(nil, error)
+        }
     }
 
 }
