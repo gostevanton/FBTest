@@ -20,7 +20,17 @@ class ViewController: UIViewController, View {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
+    // MARK: -  MainView Protocol
+    func getViewController() -> UIViewController {
+        return self
+    }
+    
+    func printResult(_ result: String) -> (Void) {
+        let alert = UIAlertController(title: "Alert", message: result, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
     
     // MARK: -  Actions
     @IBAction func getTokenButtonTapAction(_ sender: Any) {
