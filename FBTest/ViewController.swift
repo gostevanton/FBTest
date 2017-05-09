@@ -21,7 +21,7 @@ class ViewController: UIViewController, View {
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: -  MainView Protocol
+    // MARK: -  View Protocol
     func getViewController() -> UIViewController {
         return self
     }
