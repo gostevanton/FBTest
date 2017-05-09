@@ -21,6 +21,8 @@
 		E222F3BB1EC1C6E20086BCD4 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E222F3BA1EC1C6E20086BCD4 /* View.swift */; };
 		E222F3BD1EC1C7080086BCD4 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E222F3BC1EC1C7080086BCD4 /* Presenter.swift */; };
 		E222F3BF1EC1C7310086BCD4 /* PresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E222F3BE1EC1C7310086BCD4 /* PresenterImpl.swift */; };
+		E222F3C41EC1EAFD0086BCD4 /* FacebokTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E222F3C31EC1EAFD0086BCD4 /* FacebokTests.swift */; };
+		E222F3C61EC205490086BCD4 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E222F3C51EC205490086BCD4 /* GeneratedMocks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		E222F3BA1EC1C6E20086BCD4 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		E222F3BC1EC1C7080086BCD4 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		E222F3BE1EC1C7310086BCD4 /* PresenterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterImpl.swift; sourceTree = "<group>"; };
+		E222F3C31EC1EAFD0086BCD4 /* FacebokTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebokTests.swift; sourceTree = "<group>"; };
+		E222F3C51EC205490086BCD4 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,8 +150,10 @@
 		E222F39A1EC1C4080086BCD4 /* FBTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				E222F3C51EC205490086BCD4 /* GeneratedMocks.swift */,
 				E222F39B1EC1C4080086BCD4 /* FBTestTests.swift */,
 				E222F39D1EC1C4080086BCD4 /* Info.plist */,
+				E222F3C31EC1EAFD0086BCD4 /* FacebokTests.swift */,
 			);
 			path = FBTestTests;
 			sourceTree = "<group>";
@@ -242,6 +248,7 @@
 				E222F3951EC1C4080086BCD4 /* Resources */,
 				FB9AC5F46C5937B672A9B45E /* [CP] Embed Pods Frameworks */,
 				3F89A0541E8ADAE4212C9441 /* [CP] Copy Pods Resources */,
+				E222F3C01EC1E49C0086BCD4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -471,6 +478,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		E222F3C01EC1E49C0086BCD4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Define output file; change \"${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name\nOUTPUT_FILE=\"./${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory; change \"${PROJECT_NAME}\" to your project's root source folder, if it's not the default name\nINPUT_DIR=\"./${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files; include as many input files as you'd like to create mocks for\n${PODS_ROOT}/Cuckoo/run generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/PresenterImpl.swift\" \\\n\"${INPUT_DIR}/ViewController.swift\" \\\n\"${INPUT_DIR}/Facebook.swift\"";
+		};
 		FB9AC5F46C5937B672A9B45E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -506,6 +526,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E222F3C41EC1EAFD0086BCD4 /* FacebokTests.swift in Sources */,
+				E222F3C61EC205490086BCD4 /* GeneratedMocks.swift in Sources */,
 				E222F39C1EC1C4080086BCD4 /* FBTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -755,6 +777,7 @@
 				E222F3AD1EC1C4080086BCD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E222F3AE1EC1C4080086BCD4 /* Build configuration list for PBXNativeTarget "FBTestTests" */ = {
 			isa = XCConfigurationList;
@@ -763,6 +786,7 @@
 				E222F3B01EC1C4080086BCD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E222F3B11EC1C4080086BCD4 /* Build configuration list for PBXNativeTarget "FBTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -771,6 +795,7 @@
 				E222F3B31EC1C4080086BCD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

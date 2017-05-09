@@ -11,18 +11,20 @@ import SafariServices
 
 class Facebook {
     
-    static let shared = Facebook()
+    static let shared : Facebook = Facebook()
 
     private init() {
     }
     
-    let url = URL(string: "https://www.facebook.com/dialog/oauth?client_id=1211141362338583&client_secret=e891ddb7d10306bd8c2757de21795638&redirect_uri=fbconnect://success&response_type=token")
+    let url : URL? = URL(string: "https://www.facebook.com/dialog/oauth?client_id=1211141362338583&client_secret=e891ddb7d10306bd8c2757de21795638&redirect_uri=fbconnect://success&response_type=token")
     
     var viewController : UIViewController?
     
     var svc : SFSafariViewController?
     
     var callback : ((String?, Error?) -> Void)?
+    
+    var loginWasCalled : Bool = false
     
     /*! Get facebook access token by opening a login window.
      
@@ -38,6 +40,8 @@ class Facebook {
     /*! Open a login window.
     */
     private func login() {
+        loginWasCalled = true
+
         svc = SFSafariViewController(url: url!)
         viewController?.present(svc!, animated: true, completion: nil)
     }
