@@ -24,10 +24,9 @@ class Facebook {
     
     var callback : ((String?, Error?) -> Void)?
     
-    /**
-     Get facebook access token by opening a login window.
+    /*! Get facebook access token by opening a login window.
      
-     - parameter callback:      Returns AccessToken as String or an Error.
+      @param callback returns AccessToken as String or an Error.
      */
     public func getAuthToken(callback: @escaping (String?, Error?) -> Void) {
         self.callback = callback
@@ -36,18 +35,16 @@ class Facebook {
     }
     
     
-    /**
-     Open a login window.
+    /*! Open a login window.
     */
     private func login() {
         svc = SFSafariViewController(url: url!)
         viewController?.present(svc!, animated: true, completion: nil)
     }
     
-    /**
-     Parsing token from url and calling results callback with token or error
+    /*! Parsing token from url and calling results callback with token or error
      
-     - parameter url:      Url for parsing.
+      @param url for parsing.
      */
     func parsingURL(_ url: URL) {
         
