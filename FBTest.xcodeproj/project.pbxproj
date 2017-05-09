@@ -14,6 +14,10 @@
 		E222F3911EC1C4070086BCD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E222F38F1EC1C4070086BCD4 /* LaunchScreen.storyboard */; };
 		E222F39C1EC1C4080086BCD4 /* FBTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E222F39B1EC1C4080086BCD4 /* FBTestTests.swift */; };
 		E222F3A71EC1C4080086BCD4 /* FBTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E222F3A61EC1C4080086BCD4 /* FBTestUITests.swift */; };
+		E222F3B91EC1C6850086BCD4 /* Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = E222F3B81EC1C6850086BCD4 /* Facebook.swift */; };
+		E222F3BB1EC1C6E20086BCD4 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E222F3BA1EC1C6E20086BCD4 /* View.swift */; };
+		E222F3BD1EC1C7080086BCD4 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E222F3BC1EC1C7080086BCD4 /* Presenter.swift */; };
+		E222F3BF1EC1C7310086BCD4 /* PresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E222F3BE1EC1C7310086BCD4 /* PresenterImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		E222F3A21EC1C4080086BCD4 /* FBTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FBTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E222F3A61EC1C4080086BCD4 /* FBTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBTestUITests.swift; sourceTree = "<group>"; };
 		E222F3A81EC1C4080086BCD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E222F3B81EC1C6850086BCD4 /* Facebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Facebook.swift; sourceTree = "<group>"; };
+		E222F3BA1EC1C6E20086BCD4 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		E222F3BC1EC1C7080086BCD4 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		E222F3BE1EC1C7310086BCD4 /* PresenterImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,7 @@
 				E222F38D1EC1C4070086BCD4 /* Assets.xcassets */,
 				E222F38F1EC1C4070086BCD4 /* LaunchScreen.storyboard */,
 				E222F3921EC1C4070086BCD4 /* Info.plist */,
+				E222F3B81EC1C6850086BCD4 /* Facebook.swift */,
 			);
 			path = FBTest;
 			sourceTree = "<group>";
@@ -146,6 +155,8 @@
 		E222F3B61EC1C5830086BCD4 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				E222F3BC1EC1C7080086BCD4 /* Presenter.swift */,
+				E222F3BE1EC1C7310086BCD4 /* PresenterImpl.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -153,6 +164,7 @@
 		E222F3B71EC1C59C0086BCD4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E222F3BA1EC1C6E20086BCD4 /* View.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -294,8 +306,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E222F3BB1EC1C6E20086BCD4 /* View.swift in Sources */,
 				E222F3891EC1C4070086BCD4 /* ViewController.swift in Sources */,
+				E222F3BF1EC1C7310086BCD4 /* PresenterImpl.swift in Sources */,
+				E222F3B91EC1C6850086BCD4 /* Facebook.swift in Sources */,
 				E222F3871EC1C4070086BCD4 /* AppDelegate.swift in Sources */,
+				E222F3BD1EC1C7080086BCD4 /* Presenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
