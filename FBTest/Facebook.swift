@@ -10,6 +10,11 @@ import UIKit
 
 class Facebook {
     
+    static let shared = Facebook()
+
+    private init() {
+    }
+    
     /**
      Get facebook access token by opening a login window.
      

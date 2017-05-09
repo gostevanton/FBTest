@@ -106,12 +106,12 @@
 			isa = PBXGroup;
 			children = (
 				E222F3861EC1C4070086BCD4 /* AppDelegate.swift */,
+				E222F3B81EC1C6850086BCD4 /* Facebook.swift */,
 				E222F3B41EC1C5650086BCD4 /* ui */,
 				E222F38A1EC1C4070086BCD4 /* Main.storyboard */,
 				E222F38D1EC1C4070086BCD4 /* Assets.xcassets */,
 				E222F38F1EC1C4070086BCD4 /* LaunchScreen.storyboard */,
 				E222F3921EC1C4070086BCD4 /* Info.plist */,
-				E222F3B81EC1C6850086BCD4 /* Facebook.swift */,
 			);
 			path = FBTest;
 			sourceTree = "<group>";
