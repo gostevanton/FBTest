@@ -9,5 +9,7 @@
 import UIKit
 
 protocol Presenter {
-
+    init(view: View)
+    
+    func auth()
 }

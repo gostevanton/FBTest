@@ -9,5 +9,15 @@
 import UIKit
 
 class PresenterImpl: Presenter {
+    
+    let view : View
+    
+    required init(view: View) {
+        self.view = view
+    }
+    
+    func auth() {
+     
+    }
 
 }
