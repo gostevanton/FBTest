@@ -9,5 +9,7 @@
 import UIKit
 
 protocol View {
-
+    func getViewController()->UIViewController
+    
+    func printResult(_ result: String)
 }
