@@ -24,7 +24,7 @@ class ViewController: UIViewController, View {
     
     // MARK: -  Actions
     @IBAction func getTokenButtonTapAction(_ sender: Any) {
-        
+        presenter.auth()
     }
 
 }
